@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Valhalla Challenge</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	</head>
+	<body>
+		<div class="container">
+			<div id="challengeApp">
+				
+				<!-- ----------------------------top logo -->
+				<div class="topBar">
+					
+					<div class="logo">
+						<img src="res/avalith.png" class="logoTop" id="logo" >
+					</div>
+					
+					
+				</div>
+				
+				
+				<!------------------- fin top logo -->
+				<div class="middle">
+					<div class="sideBar" id="sideBar">
+						<div class="personalData">
+							<p class="pData name">DARIO SWIDZINSKI</p>
+							<p class="pData dni">DNI: 32.937.417</p>
+							<p class="pData age">31 YEARS OLD</p>
+						</div>
+						<div class="searchFilter">
+							<div class="textSearch">
+								<input type="text" name="searchBar" placeholder="Search in cards..." v-model="searchTerm" id="searchBar">
+							</div>
+							<div class="filterSearch">
+								<h3 class="filterBy">Filter by</h3>
+								
+								<div class="radio">
+									<label for="front" class="radioGrp">
+									<input v-model="showFront" type="radio" name="frontOrBack" id="front" class="radioGrp with-gap"><span>Frontend</span>
+									</label>
+								</div>
+								<div class="radio">
+									<label for="back" class="radioGrp">
+									<input v-model="showBack" type="radio" name="frontOrBack" id="back" class="radioGrp with-gap"><span>
+									Backend</span></label>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="cards" >
+						<h2 class="langsTechs">Languages & Technologies</h2>
+						<multicard :card-array="cardArray" :search-term="searchTerm"></multicard>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/masonry.pkgd.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="js/Chart.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

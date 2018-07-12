@@ -1,0 +1,311 @@
+body{
+margin: 0px;
+}
+p{
+margin: 0px;
+}
+.container{
+display: flex;
+flex-direction: column;
+width: 100%;
+background-color: lightgrey;
+font-family: 'Roboto', sans-serif;
+}
+.topBar{
+	z-index: 1;
+padding: 0px;
+display: flex;
+position: sticky;
+top:0;
+width: 100%;
+height: 60px;
+background-color: black;
+}
+.logoTop{
+display: flex;
+width: 35px;
+height: 39px;
+}
+.logo{
+background-color: black;
+margin: 10px 1301px 11px 30px;
+cursor: pointer;
+}
+.middle{
+display: flex;
+flex-direction: row;
+width: 100%;
+height: 100%;
+}
+.sideBar{
+
+display: flex;
+flex-direction: column;
+width: 23%;
+height: 100%;
+background-color: black;
+color: #ffffff;
+		position: absolute;
+	    
+	    left: -500px;
+	    opacity: 0;
+	    transition: all 1.5s;
+	    -webkit-transition: all 1.5s;
+}
+.enter{
+	opacity: 1;
+    left: 0;
+}
+
+.personalData{
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: grey;
+width: 100%;
+height: 135px;
+}
+.pData{
+display: flex;
+color: #ffffff;
+font-style: normal;
+font-stretch: normal;
+font-weight: 300;
+letter-spacing: 0.2px;
+}
+.name {
+margin-top: 30px;
+font-size: 2vw;
+}
+.dni {
+font-size: 1.33vw;
+}
+.age{
+font-size: 1.33vw;
+}
+.filterSearch{
+display: flex;
+flex-direction: column;
+}
+.searchFilter{
+display: flex;
+flex-direction: column;
+margin-top: 50px;
+margin-left: 31px;
+color: #f8f8f8;
+}
+.filterBy{
+font-size: 18px;
+}
+#searchBar{
+border:none;
+width: 80%;
+border-bottom: 1px solid white;
+background-color: black;
+color: #f8f8f8;
+font-size: 18px;
+}
+.radios{
+display: flex;
+flex-direction: column;
+}
+.radioGrp{
+display: flex;
+font-size: 18px;
+font-weight: 300;
+font-style: normal;
+font-stretch: normal;
+line-height: 1.33;
+letter-spacing: 0.2px;
+text-align: left;
+}
+.radio{
+display: flex;
+flex-direction: row;
+}
+.langsTechs{
+width: auto;
+margin: 30px auto 30px 30px;
+text-transform: uppercase;
+font-family: Roboto;
+font-size: 24px;
+font-weight: 300;
+font-style: normal;
+font-stretch: normal;
+line-height: 1;
+letter-spacing: 0.2px;
+text-align: left;
+color: #020202;
+color: var(--black-two);
+}
+.cardContainer{
+margin-right: 10px;
+margin-bottom: 10px;
+display: flex;
+flex-direction: column;
+width: 325px;
+height: auto;
+}
+.cardImage{
+width: 325px;
+height: 216px;
+cursor: pointer;
+}
+div.cardImage{
+display: flex;
+}
+.cardText {
+display: flex;
+width: 325px;
+height: auto;
+}
+.cardText p{
+height: auto;
+padding: 20px;
+}
+.cards{
+	margin-left: 23%;
+display: flex;
+overflow-y: auto;
+overflow-x: hidden;
+flex-direction: column;
+width: 100%;
+height: 708px;
+background-color: lightgrey;
+}
+.cards::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  
+}
+.cards::-webkit-scrollbar {
+    width: 1em;
+
+}
+ 
+.cards::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    opacity: 0.2;
+}
+
+
+.multiCardContainer{
+padding: 30px;
+display: flex;
+flex-direction: row;
+flex-flow: wrap;
+}
+.uniCard{
+display: flex;
+}
+@media(max-width: 1000px){
+.middle{
+flex-direction: column;
+}
+}
+
+.postContainer{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-left: 23%;
+
+}
+.postText{
+	display:flex;
+	background-color: white;
+	margin: 4.7% 1% 4.7% 4.7%;
+	font-family: Roboto, sans-serif;
+  	font-size: 18px;	
+}
+
+.postContent{
+	display: flex;
+	flex-direction: row;
+}
+.postGraph{
+	display: block;
+	margin-right: 4.7%;
+
+}
+
+
+/*-----------------------------------------------------------
+|															|
+|					MATERIALIZE RADIOS 						|
+|															|
+-----------------------------------------------------------*/
+[type="radio"]:not(:checked),
+[type="radio"]:checked {
+position: absolute;
+opacity: 0;
+pointer-events: none;
+}
+[type="radio"]:not(:checked) + span,
+[type="radio"]:checked + span {
+position: relative;
+padding-left: 35px;
+cursor: pointer;
+display: inline-block;
+height: 25px;
+line-height: 25px;
+font-size: 1rem;
+-webkit-transition: .28s ease;
+transition: .28s ease;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+[type="radio"] + span:before,
+[type="radio"] + span:after {
+content: '';
+position: absolute;
+left: 0;
+top: 0;
+margin: 4px;
+width: 16px;
+height: 16px;
+z-index: 0;
+-webkit-transition: .28s ease;
+transition: .28s ease;
+}
+/* Unchecked styles */
+[type="radio"]:not(:checked) + span:before,
+[type="radio"]:not(:checked) + span:after,
+[type="radio"]:checked + span:before,
+[type="radio"]:checked + span:after,
+[type="radio"].with-gap:checked + span:before,
+[type="radio"].with-gap:checked + span:after {
+border-radius: 50%;
+}
+[type="radio"]:not(:checked) + span:before,
+[type="radio"]:not(:checked) + span:after {
+border: 2px solid white;
+}
+[type="radio"]:not(:checked) + span:after {
+-webkit-transform: scale(0);
+transform: scale(0);
+}
+/* Checked styles */
+[type="radio"]:checked + span:before {
+border: 2px solid transparent;
+}
+[type="radio"]:checked + span:after,
+[type="radio"].with-gap:checked + span:before,
+[type="radio"].with-gap:checked + span:after {
+border: 2px solid white;
+}
+[type="radio"]:checked + span:after,
+[type="radio"].with-gap:checked + span:after {
+background-color: white;
+}
+[type="radio"]:checked + span:after {
+-webkit-transform: scale(1.02);
+transform: scale(1.02);
+}
+/* Radio With gap */
+[type="radio"].with-gap:checked + span:after {
+-webkit-transform: scale(0.5);
+transform: scale(0.5);
+}
